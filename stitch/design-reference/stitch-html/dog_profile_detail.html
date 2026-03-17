@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<div class="fixed top-0 z-50 flex w-full items-center justify-between bg-white/80 dark:bg-background-dark/80 px-4 py-4 backdrop-blur-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100 cursor-pointer">arrow_back</span>
+</div>
+<h2 class="text-lg font-bold tracking-tight text-center flex-1 pr-6">HOUND Profili</h2>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100 cursor-pointer">share</span>
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100 cursor-pointer">favorite</span>
+</div>
+</div>
+<!-- Hero Gallery -->
+<div class="mt-14 @container">
+<div class="relative w-full aspect-[4/5] overflow-hidden">
+<div class="h-full w-full bg-cover bg-center" data-alt="Stately Great Dane sitting in a sunlit garden" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtvBuquE4soyGq3EeIo_ljwr5KSKu1LnEzoxfW5voX7gpGNY_zvAEDC0mUtIex725FBWd4A9zoTdWjq4HM_9x2wsUErHHzRKuvoKTo9S2A_te7enAW5T7829XJntW3dW39oIf2tRyXnx4VVvBDyb4VOtCSf2yjqGoOz02dSYigx5e24yL3Q7VXfFEPunpnhlofy-g-OeRUyvUJLM99zXvkOPJ1MIePB6AwQx4-HxyOQMxR0BkqNgqv1DobGV_oopRGO6dnaskZlndu");'>
+</div>
+<!-- Page Indicators -->
+<div class="absolute bottom-6 left-0 right-0 flex justify-center gap-2">
+<div class="h-1.5 w-6 rounded-full bg-primary"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-white/50"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-white/50"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-white/50"></div>
+</div>
+</div>
+</div>
+<!-- Main Content -->
+<div class="relative -mt-8 flex flex-col rounded-t-[2rem] bg-background-light dark:bg-background-dark px-6 pt-8 pb-32">
+<!-- Identity Header -->
+<div class="flex flex-col items-center text-center space-y-2">
+<div class="flex items-center gap-2">
+<h1 class="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Jasper</h1>
+<div class="flex items-center justify-center rounded-full bg-amber-100 dark:bg-amber-900/30 p-1">
+<span class="material-symbols-outlined text-amber-500 text-sm" style="font-variation-settings: 'FILL' 1">verified</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-lg font-medium text-primary">Danua • Chelsea Circle</p>
+<div class="flex items-center justify-center gap-1.5">
+<span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400">Onaylı Üye</span>
+</div>
+</div>
+</div>
+<!-- Stats Bar -->
+<div class="mt-8 grid grid-cols-3 divide-x divide-primary/10 border-y border-primary/10 py-4">
+<div class="flex flex-col items-center">
+<span class="text-xs uppercase tracking-tighter text-slate-500 dark:text-slate-400">Yaş</span>
+<span class="font-bold">4 Yıl</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-xs uppercase tracking-tighter text-slate-500 dark:text-slate-400">Ağırlık</span>
+<span class="font-bold">65 kg</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-xs uppercase tracking-tighter text-slate-500 dark:text-slate-400">Cinsiyet</span>
+<span class="font-bold">Erkek</span>
+</div>
+</div>
+<!-- About Section -->
+<div class="mt-8 space-y-3">
+<h3 class="text-xl font-bold">Hakkında</h3>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                    Jasper, altın gibi bir kalbi olan nazik bir devdir. Chelsea'nin kalbinde büyümüş olup, mahallenin sofistike ama dost canlısı ruhunu yansıtır. Görkemli duruşu ve kendinden küçük arkadaşlarına karşı şaşırtıcı derecede hassas tavırlarıyla tanınır.
+                </p>
+</div>
+<!-- Personality Circular Meters -->
+<div class="mt-10 space-y-4">
+<h3 class="text-xl font-bold">Kişilik</h3>
+<div class="flex justify-around py-4">
+<!-- Energy Meter -->
+<div class="flex flex-col items-center gap-3">
+<div class="relative flex items-center justify-center">
+<svg class="h-20 w-20 -rotate-90">
+<circle class="text-primary/10" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-primary" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-dasharray="213.6" stroke-dashoffset="120" stroke-width="6"></circle>
+</svg>
+<span class="absolute text-sm font-bold">40%</span>
+</div>
+<span class="text-xs font-medium uppercase text-slate-500">Enerji Seviyesi</span>
+</div>
+<!-- Social Meter -->
+<div class="flex flex-col items-center gap-3">
+<div class="relative flex items-center justify-center">
+<svg class="h-20 w-20 -rotate-90">
+<circle class="text-primary/10" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-primary" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-dasharray="213.6" stroke-dashoffset="20" stroke-width="6"></circle>
+</svg>
+<span class="absolute text-sm font-bold">90%</span>
+</div>
+<span class="text-xs font-medium uppercase text-slate-500">Sosyal Seviye</span>
+</div>
+</div>
+</div>
+<!-- Favorite Activity -->
+<div class="mt-10 rounded-2xl bg-primary/5 p-6 border border-primary/10">
+<div class="flex items-start gap-4">
+<div class="flex size-12 items-center justify-center rounded-xl bg-primary text-white">
+<span class="material-symbols-outlined">park</span>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-wider text-primary">Favori Aktivite</h4>
+<p class="mt-1 text-lg font-medium">Hyde Park'ta sabah yürüyüşleri</p>
+<p class="text-sm text-slate-500">Genellikle sabah 08:00 civarında Serpentine yakınlarında görülür.</p>
+</div>
+</div>
+</div>
+<!-- Owner Section -->
+<div class="mt-10 space-y-3">
+<h3 class="text-xl font-bold">Sahip</h3>
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark/50 border border-primary/10 rounded-xl p-4">
+<img alt="Alex Rivera" class="size-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj0i97Yp-W6Zz1IQK2T-H4rQPQkFZ1tugin1aNnW2yH6c2A2QSF72j9_BhuhWWujeoJG74jF9HI_5PyYpk9J9WP9tMIWgEBD2EIEIgaAyOi3gGBUK13UvYBgYxT4gxyeDG2EUEuX8PTzEhILg7UrRKZW9A_k2ROXPs1lYrv6vdvqvdn7I1TSLlmfqDCTYnsg9G1C1VdgpylM0RUXP4joYUbqulB9ilRaIoLPm4qt-60Y-akH_6KjgJ6q_RltW4SuUZP7Go8ErIu3oq"/>
+<div class="flex flex-col">
+<span class="text-lg font-bold">Alex Rivera</span>
+<span class="text-xs text-slate-500 uppercase tracking-wide">Köpek Sahibi</span>
+</div>
+<button class="ml-auto text-primary font-bold text-sm">Mesaj Gönder</button>
+</div>
+</div>
+<!-- Neighborhood Map Preview -->
+<div class="mt-10 space-y-3">
+<h3 class="text-xl font-bold">Mahalle</h3>
+<div class="overflow-hidden rounded-xl border border-primary/10">
+<div class="h-32 w-full bg-cover bg-center" data-alt="Stylized map showing Chelsea Circle area" data-location="Chelsea, London" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBycRzzB5Xs-5HO2lKj81SGvKl4-kdSaGkzZ1Xtki5N2palRiFa98oJ504O9qVtOSjTiZ6ubIvyXDJ3mgkjxlTeZYPLozV6aOX5CnsOJN_KzIG0dVzk91wHcTNnDotOtRGndcsGGqKl5ou6wkUCgVC_6_B7t5lOZcj8K8O8_Fpjuk-zsjz1vYPZeW82sG-2LtwyCBhqlfMAToJu33IRT3IWMmvuaoTQ8_FoKESvQWDvFGg00M1Mss0YR_8kkHAJv7cKvMbElsRZCs5Y");'></div>
+<div class="flex items-center justify-between p-4 bg-white dark:bg-background-dark/50">
+<span class="text-sm font-medium">Chelsea Circle, Londra</span>
+<span class="text-primary text-sm font-bold cursor-pointer">Haritayı Görüntüle</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky CTA Button -->
+<div class="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark">
+<button class="w-full flex h-14 items-center justify-center rounded-full bg-primary text-white font-bold text-lg shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-transform">
+                Tanışma İsteği Gönder
+            </button>
+</div>
+</div>
+</body></html>

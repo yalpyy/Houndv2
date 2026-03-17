@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HOUND İstekler</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<!-- Main Container -->
+<div class="relative flex min-h-screen w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark shadow-2xl">
+<!-- Header -->
+<header class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 justify-between border-b border-primary/10">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">menu</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-semibold tracking-tight flex-1 text-center uppercase tracking-widest">Hound</h2>
+<div class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">notifications</span>
+</div>
+</header>
+<!-- Segmented Tabs -->
+<div class="px-6 py-6">
+<div class="flex h-12 w-full items-center justify-center rounded-full bg-slate-200/50 dark:bg-slate-800/50 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-4 transition-all has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-500 font-medium text-sm">
+<span class="truncate">Gelen</span>
+<input checked="" class="hidden" name="tabs" type="radio" value="Received"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-4 transition-all has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-500 font-medium text-sm">
+<span class="truncate">Giden</span>
+<input class="hidden" name="tabs" type="radio" value="Sent"/>
+</label>
+</div>
+</div>
+<!-- Request List -->
+<main class="flex-1 px-4 space-y-4 pb-24">
+<!-- Card 1 -->
+<div class="bg-white dark:bg-slate-800/40 p-4 rounded-xl border border-primary/5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start gap-4">
+<div class="size-14 shrink-0 rounded-full bg-slate-200 bg-cover bg-center border-2 border-primary/20" data-alt="Close up of a cute yellow labrador face" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDMKCh2Qhb-LslVagDEUIdRikuxreDI6cIOHWvzpjNB9VkdmYUah_7OXTIRyNfWQ6TFsc1A0J7DVdxW4UHLFXG73CQn2a691kzaWJABwFaxPHvgIdNpsX4cB9gC4EAMROOKw7pETRXNC99gIx4tOBVosXRG52BPnK-YctiGPZCXWrk4aJBouxfvwpcLwbXINLXP-LO5fcdFjqa8SOmYvh_46XTVARY6C_P9HBoJxVyg2pqz7O9XVf0VwsWeuP13qnTnYHawyXTgsk0G");'></div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-slate-900 dark:text-slate-100 truncate">Max</h3>
+<span class="px-2 py-0.5 rounded-full bg-amber-100/80 dark:bg-amber-900/30 text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">BEKLEMEDE</span>
+</div>
+<p class="text-xs text-slate-400 dark:text-slate-500 mb-1">Golden Retriever • 2 sa. önce</p>
+<p class="text-sm text-slate-600 dark:text-slate-300 truncate italic">"Hafta sonu parkta oyun buluşması harika olur!"</p>
+</div>
+</div>
+<div class="mt-4 flex gap-3">
+<button class="flex-1 h-10 rounded-lg bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 text-sm font-semibold hover:opacity-90 transition-opacity">
+                        Kabul Et
+                    </button>
+<button class="flex-1 h-10 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 text-sm font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                        Reddet
+                    </button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white dark:bg-slate-800/40 p-4 rounded-xl border border-primary/5 shadow-sm">
+<div class="flex items-start gap-4">
+<div class="size-14 shrink-0 rounded-full bg-slate-200 bg-cover bg-center border-2 border-primary/20" data-alt="Beagle dog looking curious at the camera" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBfc9bRFNd4QkdWX3-3AsFzWocreyRnKd81krr1gZzOHGfdxHk08s1KnlJCGI0bdnsAId1pMl6bDNYw4_Dqi1DylCEGa7KJ13EGBPheDLDTaeYU9-YPl9bNHCocspkmYc0XxfdtnLG3R5evNJFFg2nkIXnXmkWHk7cm9cA-ffOJJ7xPv_m47TKqVw0QUvZrg9vi6VP6phmI8I4c2VdvSxPDABgYe-QlspoGDNQ2ufskhVSB2Dyxgkg64g60_t4NFgqeYUerr9s1zrQq");'></div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-slate-900 dark:text-slate-100 truncate">Charlie</h3>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100/80 dark:bg-emerald-900/30 text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">ONAYLANDI</span>
+</div>
+<p class="text-xs text-slate-400 dark:text-slate-500 mb-1">Beagle • 5 sa. önce</p>
+<p class="text-sm text-slate-600 dark:text-slate-300 truncate italic">"Charlie diğer köpeklerle çok iyi anlaşır..."</p>
+</div>
+</div>
+<div class="mt-4 flex gap-3">
+<button class="flex-1 h-10 rounded-lg bg-primary text-white text-sm font-semibold hover:bg-primary/90 transition-opacity">
+                        Mesaj Gönder
+                    </button>
+<button class="flex-1 h-10 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 text-sm font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                        Arşivle
+                    </button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white dark:bg-slate-800/40 p-4 rounded-xl border border-primary/5 shadow-sm opacity-80">
+<div class="flex items-start gap-4">
+<div class="size-14 shrink-0 rounded-full bg-slate-200 bg-cover bg-center border-2 border-primary/20" data-alt="Small white fluffy dog sitting on grass" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhVp6WXooDIRPliZvbf8dfWwSZD2ay2dkqrVmjfQaqdEYcJG0BVMW0P0ltKXOCsxjT74Bkg5wcxcPwUvUNGiRy60BIN1rQkx7Uy3Fieu5xtGckviIPRUhgpVzX3OA-p4HcLb4lHT4eSZ8s8KA8wdX6nb4IAWQttkFJEBJ3euPffUggJphcjd3thgmsdfqOQ-I6YpHoYtBcQkh5DGZi0uAvN3ZJw8weyKfx7psauZ2UDPW64cuIrIykDPRmzsIC7r8SCxThXPaGGTrk");'></div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-slate-900 dark:text-slate-100 truncate">Luna</h3>
+<span class="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">REDDEDİLDİ</span>
+</div>
+<p class="text-xs text-slate-400 dark:text-slate-500 mb-1">Samoyed • 1 gün önce</p>
+<p class="text-sm text-slate-400 dark:text-slate-500 truncate italic">"Yarın buralarda mısınız?"</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-t border-primary/10 px-4 pb-6 pt-3 flex justify-between items-center z-20">
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[26px]">home</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Anasayfa</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[26px] fill-1">mail</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">İstekler</span>
+</a>
+<div class="relative -top-8">
+<button class="bg-primary size-14 rounded-full flex items-center justify-center text-white shadow-lg shadow-primary/30 border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[26px]">map</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Keşfet</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[26px]">person</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Profil</span>
+</a>
+</nav>
+</div>
+</body></html>

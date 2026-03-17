@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HOUND Üyelik Başvurusu - Adım 1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "gold": "#c5a059",
+                        "background-light": "#fdfcfb",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+        .form-input-premium {
+            transition: all 0.2s ease-in-out;
+        }
+        .form-input-premium:focus {
+            border-color: #c5a059;
+            box-shadow: 0 0 0 1px #c5a059;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col max-w-2xl mx-auto px-4 sm:px-6">
+<header class="flex items-center py-8 justify-between">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">close</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-sm font-semibold uppercase tracking-[0.2em] flex-1 text-center">HOUND</h1>
+<div class="w-10"></div>
+</header>
+<div class="flex flex-col gap-4 mb-12">
+<div class="flex justify-between items-end">
+<div class="flex flex-col">
+<span class="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-1">SÜREÇ</span>
+<h2 class="text-xl font-medium text-slate-900 dark:text-slate-100">Üyelik Başvurusu</h2>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Adım 1 / 5</p>
+</div>
+<div class="h-[1px] w-full bg-slate-200 dark:bg-slate-800 relative">
+<div class="absolute top-0 left-0 h-[2px] bg-gold" style="width: 20%;"></div>
+</div>
+<p class="text-gold text-xs font-semibold uppercase tracking-widest">KİŞİSEL BİLGİLER</p>
+</div>
+<main class="flex flex-col gap-8 pb-20">
+<div class="text-center space-y-3 mb-4">
+<h2 class="text-slate-900 dark:text-slate-100 text-3xl font-light leading-tight tracking-tight">Çemberimize Hoş Geldiniz</h2>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal max-w-md mx-auto">Lütfen resmi kabul sürecine başlamak için bilgilerinizi sağlayın. Tüm bilgiler kesinlikle gizli tutulacaktır.</p>
+</div>
+<form class="flex flex-col gap-8">
+<div class="space-y-6">
+<div class="group">
+<label class="block mb-2">
+<span class="text-slate-400 dark:text-slate-500 text-xs font-bold uppercase tracking-widest group-focus-within:text-gold transition-colors">TAM ADINIZ</span>
+</label>
+<input class="form-input-premium w-full bg-transparent border-0 border-b border-slate-300 dark:border-slate-700 py-4 px-0 text-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-300 dark:placeholder:text-slate-600 focus:ring-0 focus:border-gold rounded-none" placeholder="Tam yasal isminizi girin" type="text"/>
+</div>
+<div class="group">
+<label class="block mb-2">
+<span class="text-slate-400 dark:text-slate-500 text-xs font-bold uppercase tracking-widest group-focus-within:text-gold transition-colors">ŞEHİR / BİRİNCİ ÇEMBER</span>
+</label>
+<div class="relative">
+<input class="form-input-premium w-full bg-transparent border-0 border-b border-slate-300 dark:border-slate-700 py-4 px-0 text-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-300 dark:placeholder:text-slate-600 focus:ring-0 focus:border-gold rounded-none pr-10" placeholder="Örn. İstanbul, Londra, Tokyo" type="text"/>
+<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 text-slate-400">location_on</span>
+</div>
+</div>
+<div class="group">
+<label class="block mb-2">
+<span class="text-slate-400 dark:text-slate-500 text-xs font-bold uppercase tracking-widest group-focus-within:text-gold transition-colors">REFERANS KODU</span>
+</label>
+<input class="form-input-premium w-full bg-transparent border-0 border-b border-slate-300 dark:border-slate-700 py-4 px-0 text-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-300 dark:placeholder:text-slate-600 focus:ring-0 focus:border-gold rounded-none tracking-[0.2em] uppercase" placeholder="Opsiyonel benzersiz kod" type="text"/>
+<p class="mt-2 text-[11px] text-slate-400 italic">Öncelikli erişim, doğrulanmış üye referansı gerektirir.</p>
+</div>
+</div>
+<div class="mt-12 flex flex-col gap-6">
+<button class="w-full bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 h-16 rounded-none font-semibold text-sm uppercase tracking-[0.3em] hover:bg-gold dark:hover:bg-gold hover:text-white transition-all duration-300 shadow-xl shadow-slate-200 dark:shadow-none" type="submit">
+                        DEVAM ET
+                    </button>
+<div class="flex items-center justify-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="text-[10px] uppercase tracking-[0.15em] font-medium">GÜVENLİ ŞİFRELEMELİ BAŞVURU</span>
+</div>
+</div>
+</form>
+</main>
+<footer class="mt-auto py-8 text-center border-t border-slate-100 dark:border-slate-800">
+<div class="flex justify-center gap-8 mb-4">
+<a class="text-[10px] uppercase tracking-widest text-slate-400 hover:text-gold transition-colors" href="#">Gizlilik Bildirgesi</a>
+<a class="text-[10px] uppercase tracking-widest text-slate-400 hover:text-gold transition-colors" href="#">Katılım Koşulları</a>
+<a class="text-[10px] uppercase tracking-widest text-slate-400 hover:text-gold transition-colors" href="#">Destek</a>
+</div>
+<p class="text-[10px] text-slate-300 dark:text-slate-600 uppercase tracking-widest">© 2024 HOUND Collective. Tüm hakları saklıdır.</p>
+</footer>
+</div>
+</body></html>

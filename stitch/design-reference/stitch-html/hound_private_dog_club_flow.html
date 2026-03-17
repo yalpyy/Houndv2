@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a2b4b", // Deep Heritage Navy
+                        "accent": "#c5a059",  // Sophisticated Gold
+                        "background-light": "#fdfaf6", // Ivory Parchment
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "serif"],
+                        "serif-custom": ["serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .letter-spacing-widest {
+            letter-spacing: 0.4em;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden">
+<!-- Main Content Area -->
+<div class="flex flex-col items-center justify-center px-6 text-center max-w-2xl">
+<!-- Logo Wordmark -->
+<h1 class="text-primary dark:text-accent font-serif-custom text-[64px] md:text-[80px] font-light tracking-[0.15em] leading-none mb-4 select-none">
+                HOUND
+            </h1>
+<!-- Tagline (Turkish Update) -->
+<p class="text-primary/60 dark:text-accent/60 text-[10px] md:text-xs font-medium letter-spacing-widest uppercase mb-24 md:mb-32">
+                Özel seçki bir köpek topluluğu
+            </p>
+</div>
+<!-- Footer Loading Element -->
+<div class="absolute bottom-16 w-full max-w-[200px] px-4">
+<div class="relative h-[1px] w-full bg-primary/10 dark:bg-accent/10 rounded-full overflow-hidden">
+<!-- Subtle shimmering loading line -->
+<div class="absolute left-0 top-0 h-full bg-primary dark:bg-accent w-1/3 opacity-40"></div>
+</div>
+</div>
+<!-- Decorative Subtle Texture Overlay -->
+<div class="pointer-events-none absolute inset-0 opacity-[0.03] dark:opacity-[0.05]" data-alt="Subtle ivory parchment paper texture pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2v7RQQBOHpAw-ZDQ815-4eLHyKJ7b6dN1m2CksfzK5HZBm33RPvVeiinmXf52Y4tPy_03EqW9S_AJCesxEcmYqyoeQZ9kAt0PAM8f1eM4r10BLO9SJJX8MFpSGcM57Lz0iF95lXudUwfWq56s7E-gb0i_DnVJ0DR8HccCNgDhTDYwY37uZvrLoK51NKySeMKA9kZAfy3Bj_N4aVrzJT_1pwslW1cuBGkH4XCUOD0eZVk0lMXJxS7PSC2b4kdKE3_noGfeCb-LvUGx');">
+</div>
+</div>
+</body></html>

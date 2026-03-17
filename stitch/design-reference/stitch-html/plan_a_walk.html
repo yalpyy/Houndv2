@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HOUND - Yürüyüş Planla</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #ec5b1333;
+            border-radius: 10px;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full max-w-2xl mx-auto flex-col bg-background-light dark:bg-background-dark overflow-x-hidden font-display">
+<!-- Header / TopAppBar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-6 pb-2 justify-between sticky top-0 z-10 border-b border-primary/10">
+<div class="text-primary flex size-12 shrink-0 items-center cursor-pointer" data-icon="ArrowLeft">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight flex-1 text-center pr-12">Yürüyüş Planla</h2>
+</div>
+<div class="flex flex-col gap-8 p-6">
+<!-- Section: Select Date -->
+<section>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight mb-4">Tarih Seçin</h3>
+<div class="bg-white dark:bg-slate-800/50 rounded-xl p-6 shadow-sm border border-primary/5">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center p-1 justify-between mb-4">
+<button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold flex-1 text-center">Ekim 2023</p>
+<button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-y-1">
+<p class="text-slate-400 dark:text-slate-500 text-xs font-bold flex h-10 w-full items-center justify-center">Pz</p>
+<p class="text-slate-400 dark:text-slate-500 text-xs font-bold flex h-10 w-full items-center justify-center">Pt</p>
+<p class="text-slate-400 dark:text-slate-500 text-xs font-bold flex h-10 w-full items-center justify-center">Sa</p>
+<p class="text-slate-400 dark:text-slate-500 text-xs font-bold flex h-10 w-full items-center justify-center">Ça</p>
+<p class="text-slate-400 dark:text-slate-500 text-xs font-bold flex h-10 w-full items-center justify-center">Pe</p>
+<p class="text-slate-400 dark:text-slate-500 text-xs font-bold flex h-10 w-full items-center justify-center">Cu</p>
+<p class="text-slate-400 dark:text-slate-500 text-xs font-bold flex h-10 w-full items-center justify-center">Ct</p>
+<!-- Placeholder days for grid alignment -->
+<div class="h-10 w-full col-start-1"></div>
+<div class="h-10 w-full"></div>
+<div class="h-10 w-full"></div>
+<button class="h-10 w-full text-slate-900 dark:text-slate-100 text-sm font-medium">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">1</div>
+</button>
+<button class="h-10 w-full text-slate-900 dark:text-slate-100 text-sm font-medium">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">2</div>
+</button>
+<button class="h-10 w-full text-slate-900 dark:text-slate-100 text-sm font-medium">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">3</div>
+</button>
+<button class="h-10 w-full text-slate-900 dark:text-slate-100 text-sm font-medium">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">4</div>
+</button>
+<button class="h-10 w-full text-white text-sm font-medium">
+<div class="flex size-8 mx-auto items-center justify-center rounded-full bg-primary shadow-lg shadow-primary/30">5</div>
+</button>
+<button class="h-10 w-full text-slate-900 dark:text-slate-100 text-sm font-medium">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">6</div>
+</button>
+<button class="h-10 w-full text-slate-900 dark:text-slate-100 text-sm font-medium">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">7</div>
+</button>
+<button class="h-10 w-full text-slate-900 dark:text-slate-100 text-sm font-medium">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">8</div>
+</button>
+<button class="h-10 w-full text-slate-300 dark:text-slate-600 text-sm font-medium" disabled="">
+<div class="flex size-full items-center justify-center">9</div>
+</button>
+<button class="h-10 w-full text-slate-300 dark:text-slate-600 text-sm font-medium" disabled="">
+<div class="flex size-full items-center justify-center">10</div>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Time of Day -->
+<section>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight mb-4">Günün Saati</h3>
+<div class="flex flex-wrap gap-3">
+<button class="flex h-11 px-5 items-center justify-center gap-x-2 rounded-full bg-primary/10 border border-primary/20 text-primary transition-all">
+<span class="material-symbols-outlined text-lg">wb_sunny</span>
+<p class="text-sm font-semibold">Sabah</p>
+</button>
+<button class="flex h-11 px-5 items-center justify-center gap-x-2 rounded-full bg-primary text-white shadow-lg shadow-primary/20 transition-all">
+<span class="material-symbols-outlined text-lg">light_mode</span>
+<p class="text-sm font-semibold">Öğle</p>
+</button>
+<button class="flex h-11 px-5 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-lg">wb_twilight</span>
+<p class="text-sm font-semibold">Akşam</p>
+</button>
+<button class="flex h-11 px-5 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-lg">nights_stay</span>
+<p class="text-sm font-semibold">Gün Batımı</p>
+</button>
+</div>
+</section>
+<!-- Section: Location Circle -->
+<section>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight mb-4">Çember Seçin</h3>
+<div class="grid grid-cols-1 gap-3">
+<div class="flex items-center p-4 rounded-xl border-2 border-primary bg-primary/5 cursor-pointer">
+<div class="size-12 rounded-lg overflow-hidden shrink-0 border border-primary/20">
+<img class="w-full h-full object-cover" data-alt="Stylized map showing Holland Park area circle" data-location="London Holland Park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1hcROtxlUtTfyFkREIR_rdCVyjkCci8HvTjH9HCA1xc0S4OS4pxwRI4vN3jpiDm7EvMQGNSGYKjAdxTACCqf2oufHXCQg2hhOOGBebHoUrTHCJno5j4AzKM38BikNyY65lFP57pmMND1nZqqxXuETM9WPve-4LgjL1T_tAU53yGrBG1pR--u9XL0nT20eXzAohr4maKj9NO_a2iDcgBFsg7kWDe7-6BH0r5NA4b5pnelybJFQIT0tAxUhTwutR487xEPu5LsqA-0n"/>
+</div>
+<div class="ml-4 flex-1">
+<p class="text-slate-900 dark:text-slate-100 font-bold">Holland Park Çemberi</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Birincil yürüyüş bölgesi • 1.2 mil uzakta</p>
+</div>
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</div>
+<div class="flex items-center p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 hover:border-primary/30 transition-all cursor-pointer">
+<div class="size-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 dark:border-slate-700">
+<img class="w-full h-full object-cover" data-alt="Stylized map showing Kensington Gardens area circle" data-location="Kensington Gardens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGnHNYykzlsnc4eHM7IZZ2b9rWTgMM_UOAOx8Imna4rma0BLb03DS1Bq2G0nlpPm7knmBbGr4wPV9HC8lZSVTv6hdAskAr0hkvvCz8Hk9KngLgdceA-FoJ2nYXcXPM4imhEMAMPuMX4eT2WwTT8kb013UzpBnyFGhynB4_c70xjQo0HkpKxQNO_-2KX22klnOzKkT2R3Y0vomgp9JoHFtbpSHFMc_uwZg67hkxbLQWF4FnWVfOojjjerdb1j81tTtfWrL1JyLhS_IQ"/>
+</div>
+<div class="ml-4 flex-1">
+<p class="text-slate-900 dark:text-slate-100 font-bold">Kensington Gardens</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Genişletilmiş bölge • 2.5 mil uzakta</p>
+</div>
+<span class="material-symbols-outlined text-slate-300">radio_button_unchecked</span>
+</div>
+</div>
+</section>
+<!-- Section: Note to Owner -->
+<section>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight mb-4">Sahibe Not</h3>
+<div class="relative">
+<textarea class="w-full h-32 p-4 bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 font-display" placeholder="Merhaba! Luna ile tanışmayı çok isterim. İlk yürüyüşümüz için kişiliği hakkında bilmem gereken özel bir şey var mı?"></textarea>
+<div class="absolute bottom-3 right-3 text-[10px] uppercase tracking-widest font-bold text-slate-400">İsteğe Bağlı</div>
+</div>
+</section>
+<!-- Action Button -->
+<div class="pt-4 pb-12">
+<button class="w-full py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-lg shadow-xl shadow-primary/20 transition-all flex items-center justify-center gap-2 group">
+<span>Teklifi Gönder</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">send</span>
+</button>
+<p class="text-center text-slate-400 dark:text-slate-500 text-xs mt-4 px-6 leading-relaxed">
+                    Bu teklifi göndererek HOUND hizmet şartlarını kabul etmiş olursunuz. Sahipler genellikle 2 saat içinde yanıt verir.
+                </p>
+</div>
+</div>
+<!-- Footer Padding -->
+<div class="h-8 bg-background-light dark:bg-background-dark"></div>
+</div>
+</body></html>

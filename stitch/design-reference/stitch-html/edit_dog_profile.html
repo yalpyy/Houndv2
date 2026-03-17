@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                        "heritage-navy": "#1a2a44",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .trait-dial {
+            position: relative;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            border: 4px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .trait-dial-active {
+            border-top-color: #ec5b13;
+            border-right-color: #ec5b13;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        /* Hide arrows in number inputs */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="max-w-xl mx-auto min-h-screen flex flex-col shadow-sm">
+<!-- TopAppBar -->
+<header class="flex items-center justify-between p-6 bg-background-light dark:bg-background-dark sticky top-0 z-10">
+<button class="text-slate-900 dark:text-slate-100 hover:opacity-70">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-heritage-navy dark:text-slate-100 text-xl font-bold tracking-tight">Köpek Bilgilerini Düzenle</h1>
+<button class="text-slate-900 dark:text-slate-100 hover:opacity-70">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</header>
+<!-- Hero Section -->
+<div class="px-6 py-8 flex flex-col items-center border-b border-primary/10">
+<div class="relative group">
+<div class="size-48 rounded-full border-2 border-primary/20 p-2 bg-white dark:bg-slate-800">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="A portrait of a stylish golden retriever" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7afJD7P4cRhcfDNtq640qtF1qX59-eurZRX6qFxULjhSzCc7d368zXgmIq4OAB5fVNR0JQyQLSO0XJypwhQkndsrr5oPm5Dmrgq_MHVuAI-doHwbq64QEpof3A9uTOwe7PbDJujgL_CPoeP1a-iaDPFKruBQ6AViLluB4w7rKU7aXdwXkLCyWMqn-sXD3VEW2ecAZIvQBDtca_lP2bv4sDv3e8jNE6V4h_ZT3AWfLh8noaXxJjKdwe2zMR1v25JXrBP1YJwyYyo82')">
+</div>
+</div>
+<label class="absolute bottom-2 right-2 bg-primary text-white p-3 rounded-full cursor-pointer shadow-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl">photo_camera</span>
+<input class="hidden" type="file"/>
+</label>
+</div>
+<div class="mt-6 text-center">
+<h2 class="text-2xl font-bold text-heritage-navy dark:text-slate-100">Canine Profilini Güncelle</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-1 font-light italic">Sadık dostunuz için sessiz lüks</p>
+</div>
+</div>
+<form class="flex-1 px-6 py-8 space-y-10 pb-48">
+<!-- Basic Details -->
+<section>
+<h3 class="text-sm font-semibold uppercase tracking-widest text-primary mb-6">KÖPEK BİLGİLERİ</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="col-span-2">
+<label class="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1 ml-1">Köpek Adı</label>
+<input class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl h-14 px-4 focus:ring-primary focus:border-primary" placeholder="örn. Barnaby" type="text" value="Barnaby"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1 ml-1">Irk</label>
+<input class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl h-14 px-4 focus:ring-primary focus:border-primary" placeholder="Golden Retriever" type="text" value="Golden Retriever"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1 ml-1">Yaş</label>
+<div class="relative">
+<select class="w-full appearance-none bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl h-14 px-4 pr-10 focus:ring-primary focus:border-primary">
+<option>Yavru</option>
+<option selected="">Yetişkin</option>
+<option>Yaşlı</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-4 text-slate-400 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="col-span-2">
+<label class="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-2 ml-1">Cinsiyet</label>
+<div class="flex gap-4">
+<button class="flex-1 py-3 border-2 border-primary bg-primary/5 text-primary font-medium rounded-xl" type="button">Erkek</button>
+<button class="flex-1 py-3 border-2 border-slate-200 dark:border-slate-700 text-slate-500 font-medium rounded-xl" type="button">Dişi</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Personality Traits -->
+<section>
+<h3 class="text-sm font-semibold uppercase tracking-widest text-primary mb-6">KİŞİLİK ÖZELLİKLERİ</h3>
+<div class="space-y-6">
+<!-- Enerji -->
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-center gap-2">
+<div class="trait-dial trait-dial-active">
+<span class="text-heritage-navy dark:text-slate-100 font-bold text-sm">85%</span>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Enerji</span>
+</div>
+<div class="flex-1">
+<input class="w-20 bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg h-10 px-3 text-sm focus:ring-primary focus:border-primary" max="100" min="0" type="number" value="85"/>
+</div>
+</div>
+<!-- Sosyallik -->
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-center gap-2">
+<div class="trait-dial trait-dial-active" style="border-left-color: #ec5b13;">
+<span class="text-heritage-navy dark:text-slate-100 font-bold text-sm">60%</span>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Sosyallik</span>
+</div>
+<div class="flex-1">
+<input class="w-20 bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg h-10 px-3 text-sm focus:ring-primary focus:border-primary" max="100" min="0" type="number" value="60"/>
+</div>
+</div>
+<!-- Uyum -->
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-center gap-2">
+<div class="trait-dial trait-dial-active" style="border-left-color: #ec5b13; border-bottom-color: #ec5b13;">
+<span class="text-heritage-navy dark:text-slate-100 font-bold text-sm">40%</span>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Uyum</span>
+</div>
+<div class="flex-1">
+<input class="w-20 bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg h-10 px-3 text-sm focus:ring-primary focus:border-primary" max="100" min="0" type="number" value="40"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Favorite Activity -->
+<section>
+<h3 class="text-sm font-semibold uppercase tracking-widest text-primary mb-6">FAVORİ AKTİVİTE</h3>
+<textarea class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl p-4 focus:ring-primary focus:border-primary resize-none" placeholder="En sevdiği parkı, oyunu veya günlük ritüellerini anlatın..." rows="3"></textarea>
+</section>
+<!-- Verification Documents -->
+<section>
+<h3 class="text-sm font-semibold uppercase tracking-widest text-primary mb-6">DOĞRULAMA</h3>
+<div class="space-y-4">
+<div class="border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-xl p-6 flex items-center justify-between hover:border-primary transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">library_books</span>
+</div>
+<div>
+<p class="font-semibold text-heritage-navy dark:text-slate-100">Köpek Pasaportu</p>
+<p class="text-xs text-slate-500">Resmi kimlik belgesi</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary">upload</span>
+</div>
+<div class="border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-xl p-6 flex items-center justify-between hover:border-primary transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">medical_information</span>
+</div>
+<div>
+<p class="font-semibold text-heritage-navy dark:text-slate-100">Aşı Kayıtları</p>
+<p class="text-xs text-slate-500">Güncel sağlık sertifikası</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary">upload</span>
+</div>
+</div>
+</section>
+</form>
+<!-- CTA Footer -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-xl bg-white/90 dark:bg-slate-900/90 backdrop-blur-md p-6 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-3">
+<div class="flex gap-3">
+<button class="flex-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-bold py-4 rounded-xl transition-all active:scale-[0.98]">
+                    Değişiklikleri Kaydet
+                </button>
+<button class="flex-[1.5] bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg transition-all active:scale-[0.98]">
+                    İncelemeye Gönder
+                </button>
+</div>
+<p class="text-[10px] text-center text-slate-500 dark:text-slate-400 italic">
+                Yapılan değişiklikler yeniden doğrulama gerektirebilir
+            </p>
+</div>
+</div>
+</body></html>

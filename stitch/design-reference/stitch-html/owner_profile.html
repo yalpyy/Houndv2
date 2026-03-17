@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ec5b13",
+              "background-light": "#f8f6f6",
+              "background-dark": "#221610",
+              "navy": "#1a2a44",
+              "ivory": "#fdfcf8"
+            },
+            fontFamily: {
+              "display": ["Public Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-ivory text-navy antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col max-w-md mx-auto border-x border-slate-200 shadow-sm">
+<!-- Header -->
+<div class="flex items-center justify-between px-6 pt-8 pb-4">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight uppercase">PROFİL</h1>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<!-- Profile Section -->
+<div class="px-6 py-6 flex flex-col items-center text-center">
+<div class="relative mb-4">
+<div class="size-32 rounded-full border-4 border-white shadow-lg bg-cover bg-center" data-alt="Professional portrait of a smiling man with a beard" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDfrbET1TshgG3PPxXIyhlwcJzADAAmZ5rvv3CCkzGKttXZoPu4zjkSAmXiiQKYbw4MeCnY3iTFLDMwWH3_cxunFbqvcfgN2URTMS9RO5hIB4ZBa6lEgUCYp6gFT-W2nAtqaK3H1-jXplMf4DZv3E678WmFLC8G3UaBsJK16ETOnWfOTvPwVqvlr20T9_jmdsj58h-zBu7I7QgPFLdOWxQzowdh5vzjTUUdwOwB8dSYyF0Dq8JUD2UtqrxbUB7RVXaFtn2dk_kBB1Ez')">
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-white p-1 rounded-full border-2 border-ivory">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+<h2 class="text-2xl font-bold mb-1">Alex Rivera</h2>
+<div class="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary rounded-full mb-4 text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">workspace_premium</span>
+                ONAYLI ÜYE
+            </div>
+<p class="text-slate-600 leading-relaxed text-sm max-w-[280px]">
+                Köpek tutkunu ve hafta sonu yürüyüşçüsü. Tüylü dostlarım için en iyi bakımı sağlamaya adandım.
+            </p>
+</div>
+<!-- Dog Management -->
+<div class="px-6 py-4">
+<div class="flex items-center justify-between mb-4 border-b border-slate-200 pb-2">
+<h3 class="text-lg font-bold uppercase tracking-tight">KÖPEK YÖNETİMİ</h3>
+<span class="text-xs font-semibold text-slate-400 uppercase">1 KAYITLI</span>
+</div>
+<div class="space-y-3">
+<!-- Dog Card 1 (Jasper Only) -->
+<div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+<div class="size-16 rounded-lg bg-cover bg-center shrink-0" data-alt="Golden Retriever puppy sitting happily" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASfEJMpN1n0-nJWBinzmvjfCVjbOH15KhcB1TM_enAqGqYPXoUhJfOtjRVrHic-n6bbDZwQaIW6mhyK0SEC-C1Cy497sYSKur1U8UyBU00JyieFaS_2Iv7eZi4fw7nYDqvTYk8FNAaAjPALDJfHOYbkUIKm-M-_WRT8aZRNUdxGgGFFtNlt_orZy5__y8fgasBxzqrCP4prsnafoiIA-LywGprw-wYJv2z9EuBqh6k7a7CF07-NrGKfMRp7emggGkJQKQP1pOMUEcU')"></div>
+<div class="flex-1">
+<p class="font-bold text-navy">Jasper</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-green-100 text-green-700 text-[10px] font-bold uppercase">ONAYLANDI</span>
+</div>
+<button class="bg-primary/5 hover:bg-primary/10 text-primary px-4 py-1.5 rounded-lg text-sm font-bold transition-colors">
+                        Düzenle
+                    </button>
+</div>
+</div>
+</div>
+<!-- Referral Section -->
+<div class="px-6 py-8 space-y-4">
+<div class="bg-navy text-white p-6 rounded-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full -mr-16 -mt-16"></div>
+<div class="relative z-10">
+<h4 class="text-lg font-bold mb-1">Bir arkadaşınızı davet edin</h4>
+<p class="text-slate-300 text-sm mb-4">HOUND kredisi kazanın.</p>
+<div class="flex items-center justify-between bg-white/10 rounded-lg p-3 border border-white/20">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-400 mb-0.5">Referans Kodunuz</span>
+<code class="font-mono text-primary font-bold tracking-widest uppercase">HOUND-ALEX-24</code>
+</div>
+<button class="text-white hover:text-primary transition-colors p-2 flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Spacer for Bottom Nav -->
+<div class="h-24"></div>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 left-0 right-0 flex justify-center pb-6 px-4">
+<div class="flex w-full max-w-md items-center justify-around gap-2 border border-slate-200 bg-white/95 backdrop-blur-md px-4 py-3 rounded-full shadow-xl">
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">ANA SAYFA</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">İSTEKLER</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">explore</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">KEŞFET</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">PROFİL</p>
+</a>
+</div>
+</div>
+</div>
+</body></html>

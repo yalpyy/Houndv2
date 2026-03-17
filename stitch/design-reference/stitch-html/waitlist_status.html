@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HOUND | Başvuru Durumu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#fcfaf7",
+                        "background-dark": "#221610",
+                        "ivory-dark": "#f5f2ed",
+                        "gold-accent": "#c5a059",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display">
+<!-- Top Navigation -->
+<nav class="flex items-center justify-between px-6 py-8 md:px-12">
+<div class="flex-1">
+<span class="material-symbols-outlined text-slate-400">menu</span>
+</div>
+<div class="flex-shrink-0">
+<h1 class="text-2xl font-bold tracking-[0.2em] text-slate-900 dark:text-slate-100">HOUND</h1>
+</div>
+<div class="flex-1 flex justify-end gap-4">
+<button class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest">ÇIKIŞ YAP</button>
+</div>
+</nav>
+<main class="flex-1 flex flex-col items-center justify-center max-w-2xl mx-auto px-6 pb-20 text-center">
+<!-- Status Badge -->
+<div class="mb-8">
+<span class="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 dark:bg-primary/20 text-primary text-xs font-bold tracking-[0.15em] uppercase border border-primary/20">
+<span class="w-2 h-2 rounded-full bg-primary mr-2 animate-pulse"></span>
+                DURUM: İNCELEMEDE
+            </span>
+</div>
+<!-- Main Heading -->
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-100 mb-6">
+            Başvurunuz İncelemede
+        </h2>
+<!-- Editorial Content -->
+<div class="mb-12">
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                Kürasyon ekibimiz, HOUND topluluğunun rafine zevk ve paylaşılan değerlerin sığınağı olarak kalmasını sağlamak için profilinizi inceliyor. Üç ila beş iş günü sürebilir.
+            </p>
+</div>
+<!-- Identification Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+<!-- Reference Number -->
+<div class="flex flex-col items-center justify-center p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-ivory-dark/50 dark:bg-slate-900/50">
+<p class="text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase mb-2">REFERANS NUMARASI</p>
+<p class="text-xl font-medium tracking-wide text-slate-900 dark:text-slate-100">HND-7721</p>
+</div>
+<!-- Referral Code -->
+<div class="flex flex-col items-center justify-center p-6 rounded-xl border-2 border-gold-accent/40 bg-gold-accent/5 dark:bg-gold-accent/10">
+<p class="text-[10px] font-bold tracking-[0.2em] text-gold-accent uppercase mb-2">REFERANS KODUNUZ</p>
+<div class="flex items-center gap-2">
+<p class="text-xl font-bold tracking-widest text-gold-accent">HOUND-VIP-09</p>
+<span class="material-symbols-outlined text-sm text-gold-accent cursor-pointer">content_copy</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Decorative -->
+<footer class="p-12 text-center">
+<div class="w-12 h-[1px] bg-slate-200 dark:border-slate-800 mx-auto mb-6"></div>
+<p class="text-[10px] font-medium tracking-[0.3em] text-slate-400 uppercase">EST. 2024 — PRIVATE SELECTION</p>
+</footer>
+<!-- Background Decoration -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none z-[-1] opacity-20 dark:opacity-10">
+<div class="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-primary/20 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[-5%] right-[-5%] w-[30%] h-[30%] bg-gold-accent/20 blur-[100px] rounded-full"></div>
+</div>
+</body></html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HOUND Chat - Jasper &amp; Alex</title>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts for Editorial feel -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hound: {
+              parchment: '#F9F7F2',
+              navy: '#1A2332',
+              champagne: '#E5E1D8',
+              gold: '#C5A059',
+              ivory: '#FFFDF9',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-typography">
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .serif-text {
+      font-family: 'Playfair Display', serif;
+    }
+    /* Subtle glassmorphism for header */
+    .glass-header {
+      background: rgba(255, 253, 249, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-hound-parchment h-screen flex flex-col overflow-hidden">
+<!-- BEGIN: Navigation Header -->
+<header class="glass-header sticky top-0 z-50 px-6 py-5 flex items-center justify-between" data-purpose="chat-header">
+<div class="flex items-center gap-5">
+<!-- Back Arrow Icon -->
+<button class="text-hound-navy">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m15 18-6-6 6-6"></path></svg>
+</button>
+<div>
+<h1 class="serif-text text-xl font-semibold text-hound-navy tracking-tight">Jasper &amp; Alex</h1>
+<p class="text-[9px] uppercase tracking-[0.2em] text-hound-gold font-bold">ÇEVRİMİÇİ</p>
+</div>
+</div>
+<!-- Action Button: Yürüyüş Planla -->
+<button class="bg-hound-gold/90 text-white px-5 py-2.5 rounded-full text-[11px] font-bold tracking-wider shadow-sm hover:bg-hound-navy transition-all duration-300">
+      Yürüyüş Planla
+    </button>
+</header>
+<!-- END: Navigation Header -->
+<!-- BEGIN: Chat History -->
+<main class="flex-1 overflow-y-auto px-6 py-10 space-y-8" data-purpose="chat-content">
+<!-- Date Divider -->
+<div class="flex justify-center mb-10">
+<span class="text-[10px] uppercase tracking-[0.3em] text-hound-gold/60 font-semibold">BUGÜN</span>
+</div>
+<!-- Received Message (Other Party - Soft Parchment/Gray) -->
+<div class="flex flex-col items-start max-w-[85%]" data-purpose="received-message">
+<div class="bg-hound-champagne/60 text-hound-navy p-5 rounded-3xl rounded-bl-none shadow-sm border border-hound-gold/10">
+<p class="text-sm leading-relaxed font-medium">Merhaba! Jasper ile tanışmak isteriz. Yarın sabah Hyde Park'ta bir yürüyüşe ne dersiniz?</p>
+</div>
+<span class="mt-2.5 text-[10px] text-gray-400 font-medium tracking-wide ml-2">09:42</span>
+</div>
+<!-- Sent Message (User - Signature Navy) -->
+<div class="flex flex-col items-end max-w-[85%] ml-auto" data-purpose="sent-message">
+<div class="bg-hound-navy text-hound-parchment p-5 rounded-3xl rounded-br-none shadow-lg">
+<p class="text-sm leading-relaxed font-medium">Harika bir fikir. Jasper sabah yürüyüşlerini çok sever.</p>
+</div>
+<div class="flex items-center gap-1.5 mt-2.5 mr-2">
+<span class="text-[10px] text-gray-400 font-medium tracking-wide">09:45</span>
+<!-- Delivered Tick -->
+<svg fill="none" height="12" stroke="#C5A059" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M20 6 9 17l-5-5"></path></svg>
+</div>
+</div>
+</main>
+<!-- END: Chat History -->
+<!-- BEGIN: Message Input Field -->
+<footer class="p-6 bg-hound-ivory border-t border-hound-gold/5" data-purpose="chat-input-area">
+<div class="relative flex items-center gap-4">
+<!-- Attachment Toggle -->
+<button class="p-1 text-hound-gold hover:text-hound-navy transition-colors">
+<svg fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" viewbox="0 0 24 24" width="26" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+</button>
+<div class="relative flex-1">
+<input class="w-full bg-hound-parchment/60 border-none focus:ring-1 focus:ring-hound-gold/20 rounded-full px-6 py-4 text-sm placeholder:text-gray-400 font-medium" placeholder="Mesaj yazın..." type="text"/>
+</div>
+<!-- Send Button -->
+<button aria-label="Mesaj Gönder" class="bg-hound-navy p-3.5 rounded-full text-hound-parchment shadow-xl hover:bg-hound-gold transition-all duration-300 transform active:scale-90">
+<svg class="rotate-45 -mt-0.5 ml-0.5" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><line x1="22" x2="11" y1="2" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+</button>
+</div>
+<!-- Bottom Indicator (Home bar styling for iOS feel) -->
+<div class="w-36 h-1 bg-hound-gold/10 rounded-full mx-auto mt-8 mb-2"></div>
+</footer>
+<!-- END: Message Input Field -->
+</body></html>

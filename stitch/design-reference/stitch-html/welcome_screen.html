@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HOUND | Seçkin Köpekler İçin Özel Topluluk</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a2a40", // Deep Navy for the requested style
+                        "accent": "#ec5b13", // Theme required primary color used as accent
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-screen w-full flex-col overflow-hidden bg-background-light dark:bg-background-dark">
+<!-- Background Hero Section -->
+<div class="absolute inset-0 w-full h-full">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover" data-alt="Majestic well-groomed dog in luxury home interior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzDguExm26kOzfUTFW4fWHqpI6ChW5Fiwz1NtvAhHGMflxX5-lTD4NJQTQENLV44pC9eitF9n6Cd5lDB7bFUMQQrGF5Z6h1sdkyG269_92sOyoVtQ9M7Rp9IXjuMv2BZQMLIrJIHhqHwRK5ADrhn0hQBR6wmVtQSAa7BkBW4eVTMN_NEAORsMqBIxyDJeArwxFKBMt6t_T8voSRssAISJ-9YVaOKw4no0H3LCJaTGLaboUDYJ3dEqrwbJeHlviZmOjtMN22im5pF_I");'></div>
+<!-- Subtle Ivory Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#fdfbf7] via-[#fdfbf7]/40 to-transparent dark:from-background-dark dark:via-background-dark/60 dark:to-transparent"></div>
+</div>
+<!-- Content Area -->
+<div class="relative flex flex-col items-center justify-end h-full w-full pb-12 px-6 z-10">
+<div class="max-w-[480px] w-full text-center space-y-6">
+<!-- Wordmark and Subtitle -->
+<div class="space-y-2">
+<h1 class="text-primary dark:text-slate-100 tracking-[0.2em] text-[40px] font-bold leading-tight uppercase">
+                    HOUND
+                </h1>
+<p class="text-slate-700 dark:text-slate-300 text-lg font-light italic leading-normal">
+                    Seçkin köpekler için özel topluluk
+                </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-4 pt-4">
+<button class="flex h-14 w-full items-center justify-center rounded-xl bg-primary text-white text-base font-semibold tracking-wide transition-opacity hover:opacity-90 shadow-lg">
+                    Üyelik Başvurusu
+                </button>
+<button class="flex h-14 w-full items-center justify-center rounded-xl border-2 border-primary/20 bg-transparent text-primary text-base font-semibold tracking-wide transition-all hover:bg-primary/5 dark:text-slate-200 dark:border-slate-700">
+                    Giriş Yap
+                </button>
+</div>
+<!-- Small Disclaimer -->
+<div class="pt-6">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-[0.1em]">
+                    Üyelik sadece davetiye ve başvuru ile mümkündür.
+                </p>
+</div>
+</div>
+</div>
+<!-- Top Navigation (Optional minimal branding) -->
+<nav class="absolute top-0 left-0 w-full p-8 z-20 flex justify-between items-center">
+<div class="text-primary dark:text-slate-100 font-bold tracking-widest text-sm">EST. 2024</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary dark:text-slate-100 cursor-pointer">menu</span>
+</div>
+</nav>
+</div>
+</body></html>
